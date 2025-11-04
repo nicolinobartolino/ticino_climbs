@@ -97,5 +97,104 @@
     "avg_gradient": "10.5%",
     "PB": "--",
     "strava": "--"
+  },
+  "Monte Ceneri Pass.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "6.6km",
+    "elevation_gain": "340m",
+    "avg_gradient": "5.2%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Gravesano to Arosio.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "4.2km",
+    "elevation_gain": "472m",
+    "avg_gradient": "11.2%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Lago del Naret.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "21.8km",
+    "elevation_gain": "1482m",
+    "avg_gradient": "6.8%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Monti di Piossina.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "7.0km",
+    "elevation_gain": "772m",
+    "avg_gradient": "11.1%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Via Naccio.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "4.7km",
+    "elevation_gain": "515m",
+    "avg_gradient": "10.9%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Monte Ceneri Summit.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "10.4km",
+    "elevation_gain": "577m",
+    "avg_gradient": "5.5%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Castel San Pietro to Muggio.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "14.6km",
+    "elevation_gain": "542m",
+    "avg_gradient": "3.7%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Morcote.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "7.1km",
+    "elevation_gain": "384m",
+    "avg_gradient": "5.4%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Monti di Ronco.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "10.0km",
+    "elevation_gain": "891m",
+    "avg_gradient": "9.0%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Monte Bre Lugano.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "5.0km",
+    "elevation_gain": "321m",
+    "avg_gradient": "6.4%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Melano to Arogno.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "8.5km",
+    "elevation_gain": "447m",
+    "avg_gradient": "5.3%",
+    "PB": "--",
+    "strava": "--"
   }
 }
