@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ticino Climbs Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Omnivore for GPX/KML -->
+  <script src="https://unpkg.com/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
+
+  <style>
+    body { margin:0; padding:0; }
+    #map { width:100%; height:100vh; }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script>
+  // -------------------------
+  // 1. Initialize map
+  // -------------------------
+  var map = L.map('map').setView([46.185, 8.965], 12);
+
+  // -------------------------
+  // 2. Stadia StamenTerrain tiles
+  // -------------------------
+  L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    minZoom: 0,
+    maxZoom: 18
+  }).addTo(map);
+
+  // -------------------------
+  // 3. Border KML (black line)
+  // -------------------------
+  var borderLayer = omnivore.kml('kml/border.kml').addTo(map);
+  borderLayer.on('ready', function() {
+    borderLayer.eachLayer(function(layer) {
+      if (layer instanceof L.Polyline) {
+        layer.setStyle({color: 'black', weight: 3});
+      }
+    });
+  });
+
+  // -------------------------
+  // 4. Marker icons (smaller, pastel)
+  // -------------------------
+  var greenIcon = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+    iconSize: [16,26],
+    iconAnchor: [8,26],
+    popupAnchor: [1,-24]
+  });
+
+  var redIcon = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+    iconSize: [16,26],
+    iconAnchor: [8,26],
+    popupAnchor: [1,-24]
+  });
+
+  // -------------------------
+  // 5. Load GPX files and metadata
+  // -------------------------
+  Promise.all([
+    fetch('gpx_files.json').then(r => r.json()),
+    fetch('climbs_info.json').then(r => r.json())
+  ])
+  .then(([gpxFiles, info]) => {
+    gpxFiles.forEach(function(f) {
+      var layer = omnivore.gpx('gpx/' + f).addTo(map);
+
+      layer.on('ready', function() {
+        var coords = layer.getLayers()[0].getLatLngs();
+
+        // GPX line style (burgundy)
+        layer.getLayers()[0].setStyle({color: '#800020', weight: 4});
+
+        var climbInfo = info[f] || {};
+
+        // Build popup HTML for end marker
+        var popupHTML = '';
+        if (climbInfo.distance) popupHTML += `<b>Distance:</b> ${climbInfo.distance}<br>`;
+        if (climbInfo.elevation_gain) popupHTML += `<b>Elevation gain:</b> ${climbInfo.elevation_gain}<br>`;
+        if (climbInfo.avg_gradient) popupHTML += `<b>Avg gradient:</b> ${climbInfo.avg_gradient}<br>`;
+        if (climbInfo.PB) popupHTML += `<b>PB:</b> ${climbInfo.PB}<br>`;
+        if (climbInfo.strava) popupHTML += `Strava: <a href="${climbInfo.strava}" target="_blank">Activity</a>`;
+
+        // Start marker (green) with formatted name from JSON as tooltip
+        L.marker(coords[0], {icon: greenIcon})
+          .addTo(map)
+          .bindTooltip(climbInfo.start_name || climbInfo.name || f, {permanent: false, direction: "top"});
+
+        // End marker (red) with full clickable popup
+        L.marker(coords[coords.length - 1], {icon: redIcon})
+          .addTo(map)
+          .bindPopup(popupHTML);
+      });
+    });
+  })
+  .catch(err => console.error('Error loading GPX files or metadata:', err));
+
+</script>
+
+</body>
+</html>
