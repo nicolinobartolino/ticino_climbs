@@ -1,0 +1,10 @@
+{
+  "new_climb.gpx": {
+    "start_name": "Start Location > Climb Name",
+    "distance": "XXkm",
+    "elevation_gain": "XXXm",
+    "avg_gradient": "X%",
+    "PB": "HH:MM:SS",
+    "strava": "https://www.strava.com/activities/XXXXX"
+  }
+}
