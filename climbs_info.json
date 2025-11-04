@@ -1,5 +1,6 @@
 {
   "Carena.gpx": {
+    "status": "ridden",
     "start_name": "Giubiasco > Carena",
     "distance": "10.2km",
     "elevation_gain": "657m",
@@ -8,6 +9,7 @@
     "strava": "https://www.strava.com/activities/14897995268"
   },
   "Monti_Motti.gpx": {
+    "status": "ridden",
     "start_name": "Cugnasco > Monti di Motti",
     "distance": "11.1km",
     "elevation_gain": "814m",
@@ -16,6 +18,7 @@
     "strava": "https://www.strava.com/activities/13100141015"
   },
   "Mergoscia.gpx": {
+    "status": "ridden",
     "start_name": "Tenero > Mergoscia",
     "distance": "8.7km",
     "elevation_gain": "505m",
@@ -24,6 +27,7 @@
     "strava": "https://www.strava.com/activities/13106617484"
   },
   "Monti_Ravecchia.gpx": {
+    "status": "ridden",
     "start_name": "Paudo > Monti di Ravecchia",
     "distance": "4.8km",
     "elevation_gain": "371m",
@@ -31,7 +35,8 @@
     "PB": "00:23:29",
     "strava": "https://www.strava.com/activities/14940865544"
   },
-   "Artore.gpx": {
+  "Artore.gpx": {
+    "status": "ridden",
     "start_name": "Daro > Artore",
     "distance": "1.8km",
     "elevation_gain": "142m",
@@ -40,11 +45,21 @@
     "strava": "https://www.strava.com/activities/13607578059"
   },
   "Monti_Taiada.gpx": {
+    "status": "ridden",
     "start_name": "Arbedo > Monti de la Taiada",
     "distance": "4.7km",
     "elevation_gain": "507m",
     "avg_gradient": "10.6%",
     "PB": "00:30:35",
     "strava": "https://www.strava.com/activities/14919227934"
+  },
+    "Alpe_di_Gesero.gpx": {
+    "status": "planned",
+    "start_name": "Arbedo > Alpe di Gesero",
+    "distance": "17.2km",
+    "elevation_gain": "1477m",
+    "avg_gradient": "9%",
+    "PB": "",
+    "strava": ""
   }
 }

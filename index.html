@@ -27,19 +27,16 @@
   // -------------------------
   // 1. Initialize map
   // -------------------------
-  var map = L.map('map').setView([46.185, 8.965], 12);
+  var map = L.map('map').setView([46.2, 8.9], 10);
 
-// -------------------------
-// 2. HOT tiles
-// -------------------------
-var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+  // OpenStreetMap HOT tiles
+  L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>',
-    subdomains: 'abc'
-}).addTo(map);
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+  }).addTo(map);
 
   // -------------------------
-  // 3. Border KML (black line)
+  // 2. Border KML (black line)
   // -------------------------
   var borderLayer = omnivore.kml('kml/border.kml').addTo(map);
   borderLayer.on('ready', function() {
@@ -51,24 +48,30 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
   });
 
   // -------------------------
-  // 4. Marker icons (smaller, pastel)
+  // 3. Marker icons
   // -------------------------
   var greenIcon = L.icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
-    iconSize: [16,26],
-    iconAnchor: [8,26],
-    popupAnchor: [1,-24]
+    iconSize: [25,41],
+    iconAnchor: [12,41],
+    popupAnchor: [1,-34]
   });
 
   var redIcon = L.icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
-    iconSize: [16,26],
-    iconAnchor: [8,26],
-    popupAnchor: [1,-24]
+    iconSize: [25,41],
+    iconAnchor: [12,41],
+    popupAnchor: [1,-34]
   });
 
+  // Colors for climbs by status
+  var colors = {
+    ridden: '#800020', // burgundy
+    planned: '#D79E2C' // warm ochre
+  };
+
   // -------------------------
-  // 5. Load GPX files and metadata
+  // 4. Load GPX files and metadata
   // -------------------------
   Promise.all([
     fetch('gpx_files.json').then(r => r.json()),
@@ -76,30 +79,31 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
   ])
   .then(([gpxFiles, info]) => {
     gpxFiles.forEach(function(f) {
+      var climbInfo = info[f] || {};
+      var status = climbInfo.status || 'ridden'; // default to ridden if missing
+      var lineColor = colors[status] || colors.ridden;
+
       var layer = omnivore.gpx('gpx/' + f).addTo(map);
 
       layer.on('ready', function() {
         var coords = layer.getLayers()[0].getLatLngs();
 
-        // GPX line style (burgundy)
-        layer.getLayers()[0].setStyle({color: '#800020', weight: 4});
+        // GPX line style
+        layer.getLayers()[0].setStyle({color: lineColor, weight: 4});
 
-        var climbInfo = info[f] || {};
-
-        // Build popup HTML for end marker
-        var popupHTML = '';
-        if (climbInfo.distance) popupHTML += `<b>Distance:</b> ${climbInfo.distance}<br>`;
-        if (climbInfo.elevation_gain) popupHTML += `<b>Elevation gain:</b> ${climbInfo.elevation_gain}<br>`;
-        if (climbInfo.avg_gradient) popupHTML += `<b>Avg gradient:</b> ${climbInfo.avg_gradient}<br>`;
-        if (climbInfo.PB) popupHTML += `<b>PB:</b> ${climbInfo.PB}<br>`;
-        if (climbInfo.strava) popupHTML += `Strava: <a href="${climbInfo.strava}" target="_blank">Activity</a>`;
-
-        // Start marker (green) with formatted name from JSON as tooltip
+        // Start marker (green) with climb name
         L.marker(coords[0], {icon: greenIcon})
           .addTo(map)
           .bindTooltip(climbInfo.start_name || climbInfo.name || f, {permanent: false, direction: "top"});
 
-        // End marker (red) with full clickable popup
+        // End marker (red) with full popup, showing all fields even if empty
+        var popupHTML = '';
+        popupHTML += `<b>Distance:</b> ${climbInfo.distance || '--'}<br>`;
+        popupHTML += `<b>Elevation gain:</b> ${climbInfo.elevation_gain || '--'}<br>`;
+        popupHTML += `<b>Avg gradient:</b> ${climbInfo.avg_gradient || '--'}<br>`;
+        popupHTML += `<b>PB:</b> ${climbInfo.PB || '--'}<br>`;
+        popupHTML += `Strava: ${climbInfo.strava ? `<a href="${climbInfo.strava}" target="_blank">Activity</a>` : '--'}`;
+
         L.marker(coords[coords.length - 1], {icon: redIcon})
           .addTo(map)
           .bindPopup(popupHTML);
