@@ -63,12 +63,12 @@
         "strava": ""
     },
     "Gambarogno_Indemini.gpx": {
-        "start_name": "Gambarogno Indemini > ",
-        "distance": "",
-        "elevation_gain": "",
-        "avg_gradient": "",
-        "PB": "",
-        "strava": "",
+        "start_name": "Gambarogno > Cima al Prato",
+        "distance": "--",
+        "elevation_gain": "--",
+        "avg_gradient": "--",
+        "PB": "--",
+        "strava": "--",
         "status": "planned"
     },
     "Lago_del_Sambuco.gpx": {
@@ -82,11 +82,11 @@
     },
     "Monte Generoso.gpx": {
         "status": "planned",
-        "start_name": "",
-        "distance": "",
-        "elevation_gain": "",
-        "avg_gradient": "",
-        "PB": "",
-        "strava": ""
+        "start_name": "Monte Generoso",
+        "distance": "--",
+        "elevation_gain": "--",
+        "avg_gradient": "--",
+        "PB": "--",
+        "strava": "--"
     }
 }

@@ -31,12 +31,12 @@ for filename in os.listdir(gpx_folder):
         if filename not in climbs_info:
             climbs_info[filename] = {
                 "status": "planned",
-                "start_name": "",
-                "distance": "",
-                "elevation_gain": "",
-                "avg_gradient": "",
-                "PB": "",
-                "strava": ""
+                "start_name": "--",
+                "distance": "--",
+                "elevation_gain": "--",
+                "avg_gradient": "--",
+                "PB": "--",
+                "strava": "--"
             }
             print(f"Created entry for {filename} in climbs_info.json")
 

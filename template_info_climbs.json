@@ -2,10 +2,10 @@
   "New_Climb.gpx": {
     "status": "planned",
     "start_name": "StartLocation > EndLocation",
-    "distance": "",
-    "elevation_gain": "",
-    "avg_gradient": "",
-    "PB": "",
-    "strava": ""
+    "distance": "--",
+    "elevation_gain": "--",
+    "avg_gradient": "--",
+    "PB": "--",
+    "strava": "--"
   }
 }
