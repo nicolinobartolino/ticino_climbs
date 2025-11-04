@@ -59,8 +59,8 @@
         "distance": "17.2km",
         "elevation_gain": "1477m",
         "avg_gradient": "9%",
-        "PB": "",
-        "strava": ""
+        "PB": "--",
+        "strava": "--"
     },
     "Gambarogno_Indemini.gpx": {
         "start_name": "Gambarogno > Cima al Prato",
@@ -83,6 +83,15 @@
     "Monte Generoso.gpx": {
         "status": "planned",
         "start_name": "Monte Generoso",
+        "distance": "--",
+        "elevation_gain": "--",
+        "avg_gradient": "--",
+        "PB": "--",
+        "strava": "--"
+    },
+    "Mergugno.gpx": {
+        "status": "planned",
+        "start_name": "Brissago > Mergugno",
         "distance": "--",
         "elevation_gain": "--",
         "avg_gradient": "--",
