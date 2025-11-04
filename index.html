@@ -5,39 +5,32 @@
   <title>Ticino Climbs Map</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-
-  <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-  <!-- Omnivore for GPX/KML -->
   <script src="https://unpkg.com/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
 
   <style>
     body { margin:0; padding:0; }
     #map { width:100%; height:100vh; }
+    .emoji-marker {
+      font-size: 30px; /* 5% smaller than before */
+      line-height: 1;
+      text-align: center;
+      pointer-events: auto;
+    }
   </style>
 </head>
 <body>
-
 <div id="map"></div>
 
 <script>
-  // -------------------------
-  // 1. Initialize map
-  // -------------------------
-  var map = L.map('map').setView([46.2, 8.9], 10);
+  var map = L.map('map').setView([46.2, 8.9], 11);
 
-  // OpenStreetMap HOT layer
-  L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+  var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
   }).addTo(map);
 
-  // -------------------------
-  // 2. Border KML (black line)
-  // -------------------------
   var borderLayer = omnivore.kml('kml/border.kml').addTo(map);
   borderLayer.on('ready', function() {
     borderLayer.eachLayer(function(layer) {
@@ -47,26 +40,6 @@
     });
   });
 
-  // -------------------------
-  // 3. Marker icons
-  // -------------------------
-  var greenIcon = L.icon({
-    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
-    iconSize: [25,41],
-    iconAnchor: [12,41],
-    popupAnchor: [1,-34]
-  });
-
-  var redIcon = L.icon({
-    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
-    iconSize: [25,41],
-    iconAnchor: [12,41],
-    popupAnchor: [1,-34]
-  });
-
-  // -------------------------
-  // 4. Load GPX files and metadata
-  // -------------------------
   Promise.all([
     fetch('gpx_files.json').then(r => r.json()),
     fetch('climbs_info.json').then(r => r.json())
@@ -79,26 +52,54 @@
         var coords = layer.getLayers()[0].getLatLngs();
         var climbInfo = info[f] || {};
 
-        // Line color based on status
-        var lineColor = climbInfo.status === "planned" ? "#D4A017" : "#800020"; // yellow ochre / burgundy
-        layer.getLayers()[0].setStyle({color: lineColor, weight: 4});
+        var riddenLineColor = '#D91E18';
+        var plannedLineColor = '#F2C94C';
+        var lineColor = climbInfo.status === 'planned' ? plannedLineColor : riddenLineColor;
 
-        // Start marker (green) with tooltip
-        L.marker(coords[0], {icon: greenIcon})
-          .addTo(map)
-          .bindTooltip(climbInfo.start_name || climbInfo.name || f, {permanent: false, direction: "top"});
+        layer.getLayers()[0].setStyle({color: lineColor, weight: 4, opacity:1});
 
-        // End marker (red) with full popup, show '--' if empty
+        // emoji markers
+        var startMarker = L.marker(coords[0], {
+          icon: L.divIcon({
+            className: 'emoji-marker',
+            html: '📍',
+            iconSize: [30,30],
+            iconAnchor: [15,30] // centers the emoji exactly on the coordinate
+          })
+        }).bindTooltip(climbInfo.start_name || f, {permanent:false, direction:"top"});
+
+        var endMarker = L.marker(coords[coords.length - 1], {
+          icon: L.divIcon({
+            className: 'emoji-marker',
+            html: '⛰️',
+            iconSize: [30,30],
+            iconAnchor: [15,30]
+          })
+        });
+
         var popupHTML = '';
-        popupHTML += `<b>Distance:</b> ${climbInfo.distance || '--'}<br>`;
-        popupHTML += `<b>Elevation gain:</b> ${climbInfo.elevation_gain || '--'}<br>`;
-        popupHTML += `<b>Avg gradient:</b> ${climbInfo.avg_gradient || '--'}<br>`;
-        popupHTML += `<b>PB:</b> ${climbInfo.PB || '--'}<br>`;
+        if (climbInfo.distance) popupHTML += `<b>Distance:</b> ${climbInfo.distance}<br>`;
+        if (climbInfo.elevation_gain) popupHTML += `<b>Elevation gain:</b> ${climbInfo.elevation_gain}<br>`;
+        if (climbInfo.avg_gradient) popupHTML += `<b>Avg gradient:</b> ${climbInfo.avg_gradient}<br>`;
+        if (climbInfo.PB) popupHTML += `<b>PB:</b> ${climbInfo.PB}<br>`;
         if (climbInfo.strava) popupHTML += `Strava: <a href="${climbInfo.strava}" target="_blank">Activity</a>`;
+        endMarker.bindPopup(popupHTML);
 
-        L.marker(coords[coords.length - 1], {icon: redIcon})
-          .addTo(map)
-          .bindPopup(popupHTML);
+        // show markers based on zoom
+        if (map.getZoom() >= 12) {
+          startMarker.addTo(map);
+          endMarker.addTo(map);
+        }
+
+        map.on('zoomend', function() {
+          if (map.getZoom() >= 12) {
+            if (!map.hasLayer(startMarker)) map.addLayer(startMarker);
+            if (!map.hasLayer(endMarker)) map.addLayer(endMarker);
+          } else {
+            if (map.hasLayer(startMarker)) map.removeLayer(startMarker);
+            if (map.hasLayer(endMarker)) map.removeLayer(endMarker);
+          }
+        });
       });
     });
   })
