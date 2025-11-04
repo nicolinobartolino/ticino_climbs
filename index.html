@@ -29,7 +29,7 @@
   // -------------------------
   var map = L.map('map').setView([46.2, 8.9], 10);
 
-  // OpenStreetMap HOT tiles
+  // OpenStreetMap HOT layer
   L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
@@ -64,12 +64,6 @@
     popupAnchor: [1,-34]
   });
 
-  // Colors for climbs by status
-  var colors = {
-    ridden: '#800020', // burgundy
-    planned: '#D79E2C' // warm ochre
-  };
-
   // -------------------------
   // 4. Load GPX files and metadata
   // -------------------------
@@ -79,30 +73,28 @@
   ])
   .then(([gpxFiles, info]) => {
     gpxFiles.forEach(function(f) {
-      var climbInfo = info[f] || {};
-      var status = climbInfo.status || 'ridden'; // default to ridden if missing
-      var lineColor = colors[status] || colors.ridden;
-
       var layer = omnivore.gpx('gpx/' + f).addTo(map);
 
       layer.on('ready', function() {
         var coords = layer.getLayers()[0].getLatLngs();
+        var climbInfo = info[f] || {};
 
-        // GPX line style
+        // Line color based on status
+        var lineColor = climbInfo.status === "planned" ? "#D4A017" : "#800020"; // yellow ochre / burgundy
         layer.getLayers()[0].setStyle({color: lineColor, weight: 4});
 
-        // Start marker (green) with climb name
+        // Start marker (green) with tooltip
         L.marker(coords[0], {icon: greenIcon})
           .addTo(map)
           .bindTooltip(climbInfo.start_name || climbInfo.name || f, {permanent: false, direction: "top"});
 
-        // End marker (red) with full popup, showing all fields even if empty
+        // End marker (red) with full popup, show '--' if empty
         var popupHTML = '';
         popupHTML += `<b>Distance:</b> ${climbInfo.distance || '--'}<br>`;
         popupHTML += `<b>Elevation gain:</b> ${climbInfo.elevation_gain || '--'}<br>`;
         popupHTML += `<b>Avg gradient:</b> ${climbInfo.avg_gradient || '--'}<br>`;
         popupHTML += `<b>PB:</b> ${climbInfo.PB || '--'}<br>`;
-        popupHTML += `Strava: ${climbInfo.strava ? `<a href="${climbInfo.strava}" target="_blank">Activity</a>` : '--'}`;
+        if (climbInfo.strava) popupHTML += `Strava: <a href="${climbInfo.strava}" target="_blank">Activity</a>`;
 
         L.marker(coords[coords.length - 1], {icon: redIcon})
           .addTo(map)
@@ -111,7 +103,6 @@
     });
   })
   .catch(err => console.error('Error loading GPX files or metadata:', err));
-
 </script>
 
 </body>
