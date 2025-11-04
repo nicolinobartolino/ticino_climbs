@@ -1,101 +1,101 @@
 {
-    "Carena.gpx": {
-        "status": "ridden",
-        "start_name": "Giubiasco > Carena",
-        "distance": "10.2km",
-        "elevation_gain": "657m",
-        "avg_gradient": "6.4%",
-        "PB": "00:41:40",
-        "strava": "https://www.strava.com/activities/14897995268"
-    },
-    "Monti_Motti.gpx": {
-        "status": "ridden",
-        "start_name": "Cugnasco > Monti di Motti",
-        "distance": "11.1km",
-        "elevation_gain": "814m",
-        "avg_gradient": "7.3%",
-        "PB": "01:00:28",
-        "strava": "https://www.strava.com/activities/13100141015"
-    },
-    "Mergoscia.gpx": {
-        "status": "ridden",
-        "start_name": "Tenero > Mergoscia",
-        "distance": "8.7km",
-        "elevation_gain": "505m",
-        "avg_gradient": "5.8%",
-        "PB": "00:34:49",
-        "strava": "https://www.strava.com/activities/13106617484"
-    },
-    "Monti_Ravecchia.gpx": {
-        "status": "ridden",
-        "start_name": "Paudo > Monti di Ravecchia",
-        "distance": "4.8km",
-        "elevation_gain": "371m",
-        "avg_gradient": "7.7%",
-        "PB": "00:23:29",
-        "strava": "https://www.strava.com/activities/14940865544"
-    },
-    "Artore.gpx": {
-        "status": "ridden",
-        "start_name": "Daro > Artore",
-        "distance": "1.8km",
-        "elevation_gain": "142m",
-        "avg_gradient": "7.8%",
-        "PB": "00:07:41",
-        "strava": "https://www.strava.com/activities/13607578059"
-    },
-    "Monti_Taiada.gpx": {
-        "status": "ridden",
-        "start_name": "Arbedo > Monti de la Taiada",
-        "distance": "4.7km",
-        "elevation_gain": "507m",
-        "avg_gradient": "10.6%",
-        "PB": "00:30:35",
-        "strava": "https://www.strava.com/activities/14919227934"
-    },
-    "Alpe_di_Gesero.gpx": {
-        "status": "planned",
-        "start_name": "Arbedo > Alpe di Gesero",
-        "distance": "17.2km",
-        "elevation_gain": "1477m",
-        "avg_gradient": "9%",
-        "PB": "--",
-        "strava": "--"
-    },
-    "Gambarogno_Indemini.gpx": {
-        "start_name": "Gambarogno > Cima al Prato",
-        "distance": "--",
-        "elevation_gain": "--",
-        "avg_gradient": "--",
-        "PB": "--",
-        "strava": "--",
-        "status": "planned"
-    },
-    "Lago_del_Sambuco.gpx": {
-        "start_name": "Peccia > Lago del Sambuco",
-        "distance": "--",
-        "elevation_gain": "--",
-        "avg_gradient": "--",
-        "PB": "--",
-        "strava": "--",
-        "status": "planned"
-    },
-    "Monte Generoso.gpx": {
-        "status": "planned",
-        "start_name": "Monte Generoso",
-        "distance": "--",
-        "elevation_gain": "--",
-        "avg_gradient": "--",
-        "PB": "--",
-        "strava": "--"
-    },
-    "Mergugno.gpx": {
-        "status": "planned",
-        "start_name": "Brissago > Mergugno",
-        "distance": "--",
-        "elevation_gain": "--",
-        "avg_gradient": "--",
-        "PB": "--",
-        "strava": "--"
-    }
+  "Carena.gpx": {
+    "status": "ridden",
+    "start_name": "Giubiasco > Carena",
+    "distance": "10.2km",
+    "elevation_gain": "657m",
+    "avg_gradient": "6.4%",
+    "PB": "00:41:40",
+    "strava": "https://www.strava.com/activities/14897995268"
+  },
+  "Monti_Motti.gpx": {
+    "status": "ridden",
+    "start_name": "Cugnasco > Monti di Motti",
+    "distance": "11.1km",
+    "elevation_gain": "814m",
+    "avg_gradient": "7.3%",
+    "PB": "01:00:28",
+    "strava": "https://www.strava.com/activities/13100141015"
+  },
+  "Mergoscia.gpx": {
+    "status": "ridden",
+    "start_name": "Tenero > Mergoscia",
+    "distance": "8.7km",
+    "elevation_gain": "505m",
+    "avg_gradient": "5.8%",
+    "PB": "00:34:49",
+    "strava": "https://www.strava.com/activities/13106617484"
+  },
+  "Monti_Ravecchia.gpx": {
+    "status": "ridden",
+    "start_name": "Paudo > Monti di Ravecchia",
+    "distance": "4.8km",
+    "elevation_gain": "371m",
+    "avg_gradient": "7.7%",
+    "PB": "00:23:29",
+    "strava": "https://www.strava.com/activities/14940865544"
+  },
+  "Artore.gpx": {
+    "status": "ridden",
+    "start_name": "Daro > Artore",
+    "distance": "1.8km",
+    "elevation_gain": "142m",
+    "avg_gradient": "7.8%",
+    "PB": "00:07:41",
+    "strava": "https://www.strava.com/activities/13607578059"
+  },
+  "Monti_Taiada.gpx": {
+    "status": "ridden",
+    "start_name": "Arbedo > Monti de la Taiada",
+    "distance": "4.7km",
+    "elevation_gain": "507m",
+    "avg_gradient": "10.6%",
+    "PB": "00:30:35",
+    "strava": "https://www.strava.com/activities/14919227934"
+  },
+  "Alpe_di_Gesero.gpx": {
+    "status": "planned",
+    "start_name": "Arbedo > Alpe di Gesero",
+    "distance": "17.2km",
+    "elevation_gain": "1477m",
+    "avg_gradient": "9%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Gambarogno_Indemini.gpx": {
+    "start_name": "Gambarogno > Cima al Prato",
+    "distance": "13.5km",
+    "elevation_gain": "1173m",
+    "avg_gradient": "8.7%",
+    "PB": "--",
+    "strava": "--",
+    "status": "planned"
+  },
+  "Lago_del_Sambuco.gpx": {
+    "start_name": "Peccia > Lago del Sambuco",
+    "distance": "9.7km",
+    "elevation_gain": "611m",
+    "avg_gradient": "6.3%",
+    "PB": "--",
+    "strava": "--",
+    "status": "planned"
+  },
+  "Monte Generoso.gpx": {
+    "status": "planned",
+    "start_name": "Monte Generoso",
+    "distance": "10.2km",
+    "elevation_gain": "775m",
+    "avg_gradient": "7.6%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Mergugno.gpx": {
+    "status": "planned",
+    "start_name": "Brissago > Mergugno",
+    "distance": "7.0km",
+    "elevation_gain": "737m",
+    "avg_gradient": "10.5%",
+    "PB": "--",
+    "strava": "--"
+  }
 }
