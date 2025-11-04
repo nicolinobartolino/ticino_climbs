@@ -13,7 +13,7 @@
     body { margin:0; padding:0; }
     #map { width:100%; height:100vh; }
     .emoji-marker {
-      font-size: 30px; /* 5% smaller than before */
+      font-size: 30px;
       line-height: 1;
       text-align: center;
       pointer-events: auto;
@@ -64,7 +64,7 @@
             className: 'emoji-marker',
             html: '📍',
             iconSize: [30,30],
-            iconAnchor: [15,30] // centers the emoji exactly on the coordinate
+            iconAnchor: [15,30]
           })
         }).bindTooltip(climbInfo.start_name || f, {permanent:false, direction:"top"});
 
@@ -82,7 +82,18 @@
         if (climbInfo.elevation_gain) popupHTML += `<b>Elevation gain:</b> ${climbInfo.elevation_gain}<br>`;
         if (climbInfo.avg_gradient) popupHTML += `<b>Avg gradient:</b> ${climbInfo.avg_gradient}<br>`;
         if (climbInfo.PB) popupHTML += `<b>PB:</b> ${climbInfo.PB}<br>`;
-        if (climbInfo.strava) popupHTML += `Strava: <a href="${climbInfo.strava}" target="_blank">Activity</a>`;
+        
+        // updated Strava logic
+        if (climbInfo.strava) {
+          if (climbInfo.strava.trim() !== '' && climbInfo.strava.trim() !== '--') {
+            popupHTML += `<b>Strava:</b> <a href="${climbInfo.strava}" target="_blank">Activity</a>`;
+          } else {
+            popupHTML += `<b>Strava:</b> --`;
+          }
+        } else {
+          popupHTML += `<b>Strava:</b> --`;
+        }
+
         endMarker.bindPopup(popupHTML);
 
         // show markers based on zoom
