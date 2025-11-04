@@ -196,5 +196,167 @@
     "avg_gradient": "5.3%",
     "PB": "--",
     "strava": "--"
+  },
+  "Semione.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "11.2km",
+    "elevation_gain": "726m",
+    "avg_gradient": "6.5%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Alpe di Giumello.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "18.1km",
+    "elevation_gain": "1354m",
+    "avg_gradient": "7.5%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Bignasco to San Carlo.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "11.6km",
+    "elevation_gain": "498m",
+    "avg_gradient": "4.3%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Dongio Brusacu.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "9.7km",
+    "elevation_gain": "822m",
+    "avg_gradient": "8.5%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Acquarossa to Nara.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "12.2km",
+    "elevation_gain": "1021m",
+    "avg_gradient": "8.4%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Cevio to Bosco Gurin.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "16.2km",
+    "elevation_gain": "1061m",
+    "avg_gradient": "6.5%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Tremola.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "13.5km",
+    "elevation_gain": "930m",
+    "avg_gradient": "6.9%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Piottino Predelp.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "8.4km",
+    "elevation_gain": "778m",
+    "avg_gradient": "9.2%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Via Sasso Corbaro.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "3.6km",
+    "elevation_gain": "226m",
+    "avg_gradient": "6.3%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Passo del Lucomagno.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "19.2km",
+    "elevation_gain": "1034m",
+    "avg_gradient": "5.4%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Faido Osco.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "5.2km",
+    "elevation_gain": "378m",
+    "avg_gradient": "7.2%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Acquarossa to Leontica.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "12.8km",
+    "elevation_gain": "1022m",
+    "avg_gradient": "8.0%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Carona.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "6.3km",
+    "elevation_gain": "337m",
+    "avg_gradient": "5.4%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Lago Ritom.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "10.3km",
+    "elevation_gain": "840m",
+    "avg_gradient": "8.2%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Olivone Campo Blenio Luzzone.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "9.1km",
+    "elevation_gain": "643m",
+    "avg_gradient": "7.1%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Faido Cari.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "11.7km",
+    "elevation_gain": "915m",
+    "avg_gradient": "7.8%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Ponto Valentino to Blenio.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "7.6km",
+    "elevation_gain": "580m",
+    "avg_gradient": "7.7%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Broglio to Brunesc.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "8.7km",
+    "elevation_gain": "794m",
+    "avg_gradient": "9.1%",
+    "PB": "--",
+    "strava": "--"
   }
 }
