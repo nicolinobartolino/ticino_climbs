@@ -358,5 +358,176 @@
     "avg_gradient": "9.1%",
     "PB": "--",
     "strava": "--"
+  },
+  "Cureggia.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "2.9km",
+    "elevation_gain": "233m",
+    "avg_gradient": "8.0%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Curzutt.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "3.8km",
+    "elevation_gain": "255m",
+    "avg_gradient": "6.7%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "San Defendente.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "4.4km",
+    "elevation_gain": "353m",
+    "avg_gradient": "8.0%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Bioggio to Cademario.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "7.0km",
+    "elevation_gain": "476m",
+    "avg_gradient": "6.8%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Crana to Spruga.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "7.4km",
+    "elevation_gain": "411m",
+    "avg_gradient": "5.6%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Sonvico to Colla.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "17.3km",
+    "elevation_gain": "817m",
+    "avg_gradient": "4.7%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Monti della Gana.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "2.8km",
+    "elevation_gain": "228m",
+    "avg_gradient": "8.0%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Capanna Monte Bar.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "19.7km",
+    "elevation_gain": "1259m",
+    "avg_gradient": "6.4%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Osura.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "4.5km",
+    "elevation_gain": "222m",
+    "avg_gradient": "4.9%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Gordola.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "4.9km",
+    "elevation_gain": "423m",
+    "avg_gradient": "8.6%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Tesserete to Convento Bigorio.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "2.4km",
+    "elevation_gain": "176m",
+    "avg_gradient": "7.4%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Neggio to Bedigliora.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "5.4km",
+    "elevation_gain": "290m",
+    "avg_gradient": "5.4%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Tesserete to Colla.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "12.6km",
+    "elevation_gain": "479m",
+    "avg_gradient": "3.8%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Camedo to Costa.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "5.6km",
+    "elevation_gain": "298m",
+    "avg_gradient": "5.4%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Gorduno to Bedretto.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "9.4km",
+    "elevation_gain": "984m",
+    "avg_gradient": "10.5%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Bioggio to Breno.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "13.6km",
+    "elevation_gain": "609m",
+    "avg_gradient": "4.5%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Frasco to Pie\u0300 della Motta.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "4.4km",
+    "elevation_gain": "403m",
+    "avg_gradient": "9.1%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Camedo to Monadello.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "6.7km",
+    "elevation_gain": "404m",
+    "avg_gradient": "6.0%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Palagnedra.gpx": {
+    "status": "planned",
+    "start_name": "--",
+    "distance": "4.0km",
+    "elevation_gain": "244m",
+    "avg_gradient": "6.2%",
+    "PB": "--",
+    "strava": "--"
   }
 }
