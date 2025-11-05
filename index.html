@@ -18,56 +18,10 @@
       text-align: center;
       pointer-events: auto;
     }
-
-    /* Progress bar */
-    #progress-wrapper {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      z-index: 1000;
-      width: 200px;
-      font-family: sans-serif;
-    }
-
-    #progress-bar-text {
-      text-align: center;
-      margin-bottom: 4px;
-      font-size: 12px;
-      font-weight: bold;
-      color: black;
-    }
-
-    #progress-bar-container {
-      width: 100%;
-      height: 20px;
-      background-color: #F2C94C; /* planned yellow for empty */
-      border-radius: 10px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.3);
-      overflow: hidden;
-      position: relative;
-    }
-
-    #progress-bar-fill {
-      height: 100%;
-      width: 0%;
-      background-color: #D91E18; /* red for ridden */
-      transition: width 0.3s ease;
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
   </style>
 </head>
 <body>
 <div id="map"></div>
-
-<!-- Progress bar -->
-<div id="progress-wrapper">
-  <div id="progress-bar-text">Ridden 0 / 0</div>
-  <div id="progress-bar-container">
-    <div id="progress-bar-fill"></div>
-  </div>
-</div>
 
 <script>
   var map = L.map('map').setView([46.2, 8.9], 10);
@@ -91,14 +45,11 @@
     fetch('climbs_info.json').then(r => r.json())
   ])
   .then(([gpxFiles, info]) => {
-
-    // Progress calculation
-    let totalClimbs = Object.keys(info).length;
-    let riddenClimbs = Object.values(info).filter(c => c.status === 'ridden').length;
-    let progressPercent = totalClimbs ? (riddenClimbs / totalClimbs) * 100 : 0;
-
-    document.getElementById('progress-bar-text').innerText = `Ridden ${riddenClimbs} / ${totalClimbs}`;
-    document.getElementById('progress-bar-fill').style.width = progressPercent + '%';
+    gpxFiles.sort((a,b) => {
+      const statusA = (info[a]?.status || 'ridden') === 'planned' ? 0 : 1;
+      const statusB = (info[b]?.status || 'ridden') === 'planned' ? 0 : 1;
+      return statusA - statusB;
+    });
 
     gpxFiles.forEach(function(f) {
       var layer = omnivore.gpx('gpx/' + f).addTo(map);
@@ -113,7 +64,6 @@
 
         layer.getLayers()[0].setStyle({color: lineColor, weight: 4, opacity:1});
 
-        // emoji markers
         var startMarker = L.marker(coords[0], {
           icon: L.divIcon({
             className: 'emoji-marker',
@@ -137,9 +87,12 @@
         if (climbInfo.elevation_gain) popupHTML += `<b>Elevation gain:</b> ${climbInfo.elevation_gain}<br>`;
         if (climbInfo.avg_gradient) popupHTML += `<b>Avg gradient:</b> ${climbInfo.avg_gradient}<br>`;
         if (climbInfo.PB) popupHTML += `<b>PB:</b> ${climbInfo.PB}<br>`;
-        
-        if (climbInfo.strava && climbInfo.strava.trim() !== '' && climbInfo.strava.trim() !== '--') {
-          popupHTML += `<b>Strava:</b> <a href="${climbInfo.strava}" target="_blank">Activity</a>`;
+        if (climbInfo.strava) {
+          if (climbInfo.strava.trim() !== '' && climbInfo.strava.trim() !== '--') {
+            popupHTML += `<b>Strava:</b> <a href="${climbInfo.strava}" target="_blank">Activity</a>`;
+          } else {
+            popupHTML += `<b>Strava:</b> --`;
+          }
         } else {
           popupHTML += `<b>Strava:</b> --`;
         }
