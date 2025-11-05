@@ -1,25 +1,24 @@
-Go to Ticino Climbs in Finder, add the .gpx file/s in the gpx folder
+1> Go to Ticino Climbs in Finder, add the .gpx file/s in the gpx folder
 
-Automated python version:
+2> Automated Python script version:
 Terminal > New Terminal, run:
+= python3 auto_add_planned_gpx.py
 
-python3 auto_add_planned_gpx.py
-
-*this populates the gpx_files.json with the gpx name (adds route to the map); and the climbs_info.json with a status of planned meaning: yellow route and end marker info box with place holders to be edited as and when.
+^This populates the gpx_files.json with the gpx name (adds route to the map); and the climbs_info.json with a status of planned meaning: yellow route and end marker info box with place holders to be edited as and when.
 
 Changing status to ridden changes the route to red. 
 PB and Strava link can be edited in the file above. 
 
 2nd python script to run extracts and writes Distance, Elevation and Average gradient, run:
-
 python3 auto_update_climb_info.py
+
+Python script for progress bar
+python3 update_climb_stats.py
 
 Manual version (e.g. to enter a single ridden climb manually) 
 Launch VS Code, open ticino_climbs folder locally:
 Add the new .gpx name in the gpx_files.json
 Add the climb info (distance, elev, strava,etc.) in the climbs_info.json [there’s a template for this]
 Save and test with live server locally
-
-If all good, time to commit and push changes
 
 *NB: manual editing still needed to add various climb info and strava link, but the script writes the gpx names to populate the map and markers for a bulk upload of planned climbs.
