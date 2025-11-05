@@ -8,6 +8,10 @@
 2nd python script to run extracts and writes Distance, Elevation and Average gradient, run:
 python3 auto_update_climb_info.py
 
+Cheeky extra script to populate start names from gpx file name
+python3 update_start_names.py
+
+
 Run this python script to update progress bar:
 python3 update_climb_stats.py
 

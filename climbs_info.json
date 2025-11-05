@@ -100,7 +100,7 @@
   },
   "Monte Ceneri Pass.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Monte Ceneri Pass",
     "distance": "6.6km",
     "elevation_gain": "340m",
     "avg_gradient": "5.2%",
@@ -109,7 +109,7 @@
   },
   "Gravesano to Arosio.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Gravesano to Arosio",
     "distance": "4.2km",
     "elevation_gain": "472m",
     "avg_gradient": "11.2%",
@@ -118,7 +118,7 @@
   },
   "Lago del Naret.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Lago del Naret",
     "distance": "21.8km",
     "elevation_gain": "1482m",
     "avg_gradient": "6.8%",
@@ -127,7 +127,7 @@
   },
   "Monti di Piossina.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Monti di Piossina",
     "distance": "7.0km",
     "elevation_gain": "772m",
     "avg_gradient": "11.1%",
@@ -136,7 +136,7 @@
   },
   "Via Naccio.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Via Naccio",
     "distance": "4.7km",
     "elevation_gain": "515m",
     "avg_gradient": "10.9%",
@@ -145,7 +145,7 @@
   },
   "Monte Ceneri Summit.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Monte Ceneri Summit",
     "distance": "10.4km",
     "elevation_gain": "577m",
     "avg_gradient": "5.5%",
@@ -154,7 +154,7 @@
   },
   "Castel San Pietro to Muggio.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Castel San Pietro to Muggio",
     "distance": "14.6km",
     "elevation_gain": "542m",
     "avg_gradient": "3.7%",
@@ -163,7 +163,7 @@
   },
   "Morcote.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Morcote",
     "distance": "7.1km",
     "elevation_gain": "384m",
     "avg_gradient": "5.4%",
@@ -172,7 +172,7 @@
   },
   "Monti di Ronco.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Monti di Ronco",
     "distance": "10.0km",
     "elevation_gain": "891m",
     "avg_gradient": "9.0%",
@@ -181,7 +181,7 @@
   },
   "Monte Bre Lugano.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Monte Bre Lugano",
     "distance": "5.0km",
     "elevation_gain": "321m",
     "avg_gradient": "6.4%",
@@ -190,7 +190,7 @@
   },
   "Melano to Arogno.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Melano to Arogno",
     "distance": "8.5km",
     "elevation_gain": "447m",
     "avg_gradient": "5.3%",
@@ -199,7 +199,7 @@
   },
   "Semione.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Semione",
     "distance": "11.2km",
     "elevation_gain": "726m",
     "avg_gradient": "6.5%",
@@ -208,7 +208,7 @@
   },
   "Alpe di Giumello.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Alpe di Giumello",
     "distance": "18.1km",
     "elevation_gain": "1354m",
     "avg_gradient": "7.5%",
@@ -217,7 +217,7 @@
   },
   "Bignasco to San Carlo.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Bignasco to San Carlo",
     "distance": "11.6km",
     "elevation_gain": "498m",
     "avg_gradient": "4.3%",
@@ -226,7 +226,7 @@
   },
   "Dongio Brusacu.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Dongio Brusacu",
     "distance": "9.7km",
     "elevation_gain": "822m",
     "avg_gradient": "8.5%",
@@ -235,7 +235,7 @@
   },
   "Acquarossa to Nara.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Acquarossa to Nara",
     "distance": "12.2km",
     "elevation_gain": "1021m",
     "avg_gradient": "8.4%",
@@ -244,7 +244,7 @@
   },
   "Cevio to Bosco Gurin.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Cevio to Bosco Gurin",
     "distance": "16.2km",
     "elevation_gain": "1061m",
     "avg_gradient": "6.5%",
@@ -253,7 +253,7 @@
   },
   "Tremola.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Tremola",
     "distance": "13.5km",
     "elevation_gain": "930m",
     "avg_gradient": "6.9%",
@@ -262,7 +262,7 @@
   },
   "Piottino Predelp.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Piottino Predelp",
     "distance": "8.4km",
     "elevation_gain": "778m",
     "avg_gradient": "9.2%",
@@ -271,7 +271,7 @@
   },
   "Via Sasso Corbaro.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Via Sasso Corbaro",
     "distance": "3.6km",
     "elevation_gain": "226m",
     "avg_gradient": "6.3%",
@@ -280,7 +280,7 @@
   },
   "Passo del Lucomagno.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Passo del Lucomagno",
     "distance": "19.2km",
     "elevation_gain": "1034m",
     "avg_gradient": "5.4%",
@@ -289,7 +289,7 @@
   },
   "Faido Osco.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Faido Osco",
     "distance": "5.2km",
     "elevation_gain": "378m",
     "avg_gradient": "7.2%",
@@ -298,7 +298,7 @@
   },
   "Acquarossa to Leontica.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Acquarossa to Leontica",
     "distance": "12.8km",
     "elevation_gain": "1022m",
     "avg_gradient": "8.0%",
@@ -307,7 +307,7 @@
   },
   "Carona.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Carona",
     "distance": "6.3km",
     "elevation_gain": "337m",
     "avg_gradient": "5.4%",
@@ -316,7 +316,7 @@
   },
   "Lago Ritom.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Lago Ritom",
     "distance": "10.3km",
     "elevation_gain": "840m",
     "avg_gradient": "8.2%",
@@ -325,7 +325,7 @@
   },
   "Olivone Campo Blenio Luzzone.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Olivone Campo Blenio Luzzone",
     "distance": "9.1km",
     "elevation_gain": "643m",
     "avg_gradient": "7.1%",
@@ -334,7 +334,7 @@
   },
   "Faido Cari.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Faido Cari",
     "distance": "11.7km",
     "elevation_gain": "915m",
     "avg_gradient": "7.8%",
@@ -343,7 +343,7 @@
   },
   "Ponto Valentino to Blenio.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Ponto Valentino to Blenio",
     "distance": "7.6km",
     "elevation_gain": "580m",
     "avg_gradient": "7.7%",
@@ -352,7 +352,7 @@
   },
   "Broglio to Brunesc.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Broglio to Brunesc",
     "distance": "8.7km",
     "elevation_gain": "794m",
     "avg_gradient": "9.1%",
@@ -361,7 +361,7 @@
   },
   "Cureggia.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Cureggia",
     "distance": "2.9km",
     "elevation_gain": "233m",
     "avg_gradient": "8.0%",
@@ -370,7 +370,7 @@
   },
   "Curzutt.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Curzutt",
     "distance": "3.8km",
     "elevation_gain": "255m",
     "avg_gradient": "6.7%",
@@ -379,7 +379,7 @@
   },
   "San Defendente.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "San Defendente",
     "distance": "4.4km",
     "elevation_gain": "353m",
     "avg_gradient": "8.0%",
@@ -388,7 +388,7 @@
   },
   "Bioggio to Cademario.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Bioggio to Cademario",
     "distance": "7.0km",
     "elevation_gain": "476m",
     "avg_gradient": "6.8%",
@@ -397,7 +397,7 @@
   },
   "Crana to Spruga.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Crana to Spruga",
     "distance": "7.4km",
     "elevation_gain": "411m",
     "avg_gradient": "5.6%",
@@ -406,7 +406,7 @@
   },
   "Sonvico to Colla.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Sonvico to Colla",
     "distance": "17.3km",
     "elevation_gain": "817m",
     "avg_gradient": "4.7%",
@@ -415,7 +415,7 @@
   },
   "Monti della Gana.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Monti della Gana",
     "distance": "2.8km",
     "elevation_gain": "228m",
     "avg_gradient": "8.0%",
@@ -424,7 +424,7 @@
   },
   "Capanna Monte Bar.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Capanna Monte Bar",
     "distance": "19.7km",
     "elevation_gain": "1259m",
     "avg_gradient": "6.4%",
@@ -433,7 +433,7 @@
   },
   "Osura.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Osura",
     "distance": "4.5km",
     "elevation_gain": "222m",
     "avg_gradient": "4.9%",
@@ -442,7 +442,7 @@
   },
   "Gordola.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Gordola",
     "distance": "4.9km",
     "elevation_gain": "423m",
     "avg_gradient": "8.6%",
@@ -451,7 +451,7 @@
   },
   "Tesserete to Convento Bigorio.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Tesserete to Convento Bigorio",
     "distance": "2.4km",
     "elevation_gain": "176m",
     "avg_gradient": "7.4%",
@@ -460,7 +460,7 @@
   },
   "Neggio to Bedigliora.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Neggio to Bedigliora",
     "distance": "5.4km",
     "elevation_gain": "290m",
     "avg_gradient": "5.4%",
@@ -469,7 +469,7 @@
   },
   "Tesserete to Colla.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Tesserete to Colla",
     "distance": "12.6km",
     "elevation_gain": "479m",
     "avg_gradient": "3.8%",
@@ -478,7 +478,7 @@
   },
   "Camedo to Costa.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Camedo to Costa",
     "distance": "5.6km",
     "elevation_gain": "298m",
     "avg_gradient": "5.4%",
@@ -487,7 +487,7 @@
   },
   "Gorduno to Bedretto.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Gorduno to Bedretto",
     "distance": "9.4km",
     "elevation_gain": "984m",
     "avg_gradient": "10.5%",
@@ -496,16 +496,16 @@
   },
   "Bioggio to Breno.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Bioggio to Breno",
     "distance": "13.6km",
     "elevation_gain": "609m",
     "avg_gradient": "4.5%",
     "PB": "--",
     "strava": "--"
   },
-  "Frasco to Pie\u0300 della Motta.gpx": {
+  "Frasco to Piè della Motta.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Frasco to Piè della Motta",
     "distance": "4.4km",
     "elevation_gain": "403m",
     "avg_gradient": "9.1%",
@@ -514,7 +514,7 @@
   },
   "Camedo to Monadello.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Camedo to Monadello",
     "distance": "6.7km",
     "elevation_gain": "404m",
     "avg_gradient": "6.0%",
@@ -523,7 +523,7 @@
   },
   "Palagnedra.gpx": {
     "status": "planned",
-    "start_name": "--",
+    "start_name": "Palagnedra",
     "distance": "4.0km",
     "elevation_gain": "244m",
     "avg_gradient": "6.2%",
