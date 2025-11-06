@@ -115,7 +115,7 @@
         // tooltip includes Category if it exists and is not "--"
         var startTooltip = climbInfo.start_name || f;
         if (climbInfo.category && climbInfo.category.trim() !== '--') {
-          startTooltip += ` (<b>Category:</b> ${climbInfo.category})`;
+          startTooltip += `<br><b>Category:</b> ${climbInfo.category}`;
         }
         startMarker.bindTooltip(startTooltip, {
           permanent:false,
