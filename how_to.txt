@@ -1,31 +1,20 @@
-1> Drop .gpx file/s in the gpx folder, named Point A > Point B.gpx
+Drop .gpx file/s in the gpx folder, name them what you want them to show as in the route's start tooltip.
+Run: python3 auto_add_planned_gpx.py
 
-2> run
-= python3 auto_add_planned_gpx.py
+This populates the gpx_files.json with the gpx name, adds route to the map and to the climbs_info.json with a status of planned 
 
-^This populates the gpx_files.json with the gpx name, adds route to the map and to the climbs_info.json with a status of planned 
+2nd python script to extract and write Distance, Elevation and Average gradient
+Run: python3 auto_update_climb_info.py
 
-2nd python script to run extracts and writes Distance, Elevation and Average gradient, run:
-python3 auto_update_climb_info.py
+Cheeky extra script to populate start names from gpx file name:
+Run: python3 update_start_names.py
 
-Cheeky extra script to populate start names from gpx file name
-python3 update_start_names.py
+Script to update progress bar
+Run: python3 update_climb_stats.py
+(Re-run if changing a climb from planned > ridden)
 
-
-Run this python script to update progress bar:
-python3 update_climb_stats.py
-(Re-run if planned > ridden)
-
-Run this to add Cat to start marker
+Script to add Category to climb start tooltip
 python3 auto_assign_climb_categories.py
 
-Changing status to ridden changes the route to red. 
-PB and Strava link can be edited in the file above. 
-
-Manual version (e.g. to enter a single ridden climb manually) 
-Launch VS Code, open ticino_climbs folder locally:
-Add the new .gpx name in the gpx_files.json
-Add the climb info (distance, elev, strava,etc.) in the climbs_info.json [there’s a template for this]
-Save and test with live server locally
-
-*NB: manual editing still needed to add PB Time and strava link
+Changing status from planned to ridden changes the route to red (manual)
+PB and Strava link can be edited in climbs_info.json manually

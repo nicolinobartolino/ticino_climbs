@@ -618,5 +618,35 @@
     "PB": "--",
     "strava": "--",
     "category": "3"
+  },
+  "Lavorgo > Monti di Co\u0300.gpx": {
+    "status": "planned",
+    "start_name": "Lavorgo > Monti di Co\u0300",
+    "distance": "9.2km",
+    "elevation_gain": "737m",
+    "avg_gradient": "8.0%",
+    "PB": "--",
+    "strava": "--",
+    "category": "1"
+  },
+  "Biaschina > Cassine.gpx": {
+    "status": "planned",
+    "start_name": "Biaschina > Cassine",
+    "distance": "15.7km",
+    "elevation_gain": "1102m",
+    "avg_gradient": "7.0%",
+    "PB": "--",
+    "strava": "--",
+    "category": "HC"
+  },
+  "Nivo > Gribbio.gpx": {
+    "status": "planned",
+    "start_name": "Nivo > Gribbio",
+    "distance": "10.1km",
+    "elevation_gain": "819m",
+    "avg_gradient": "8.1%",
+    "PB": "--",
+    "strava": "--",
+    "category": "HC"
   }
 }
