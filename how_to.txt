@@ -14,6 +14,10 @@ python3 update_start_names.py
 
 Run this python script to update progress bar:
 python3 update_climb_stats.py
+(Re-run if planned > ridden)
+
+Run this to add Cat to start marker
+python3 auto_assign_climb_categories.py
 
 Changing status to ridden changes the route to red. 
 PB and Strava link can be edited in the file above. 

@@ -6,7 +6,8 @@
     "elevation_gain": "657m",
     "avg_gradient": "6.4%",
     "PB": "00:41:40",
-    "strava": "https://www.strava.com/activities/14897995268"
+    "strava": "https://www.strava.com/activities/14897995268",
+    "category": "1"
   },
   "Monti_Motti.gpx": {
     "status": "ridden",
@@ -15,7 +16,8 @@
     "elevation_gain": "814m",
     "avg_gradient": "7.3%",
     "PB": "01:00:28",
-    "strava": "https://www.strava.com/activities/13100141015"
+    "strava": "https://www.strava.com/activities/13100141015",
+    "category": "HC"
   },
   "Mergoscia.gpx": {
     "status": "ridden",
@@ -24,7 +26,8 @@
     "elevation_gain": "505m",
     "avg_gradient": "5.8%",
     "PB": "00:34:49",
-    "strava": "https://www.strava.com/activities/13106617484"
+    "strava": "https://www.strava.com/activities/13106617484",
+    "category": "2"
   },
   "Monti_Ravecchia.gpx": {
     "status": "ridden",
@@ -33,7 +36,8 @@
     "elevation_gain": "371m",
     "avg_gradient": "7.7%",
     "PB": "00:23:29",
-    "strava": "https://www.strava.com/activities/14940865544"
+    "strava": "https://www.strava.com/activities/14940865544",
+    "category": "2"
   },
   "Artore.gpx": {
     "status": "ridden",
@@ -42,7 +46,8 @@
     "elevation_gain": "142m",
     "avg_gradient": "7.8%",
     "PB": "00:07:41",
-    "strava": "https://www.strava.com/activities/13607578059"
+    "strava": "https://www.strava.com/activities/13607578059",
+    "category": "4"
   },
   "Monti_Taiada.gpx": {
     "status": "ridden",
@@ -51,7 +56,8 @@
     "elevation_gain": "507m",
     "avg_gradient": "10.6%",
     "PB": "00:30:35",
-    "strava": "https://www.strava.com/activities/14919227934"
+    "strava": "https://www.strava.com/activities/14919227934",
+    "category": "2"
   },
   "Alpe_di_Gesero.gpx": {
     "status": "planned",
@@ -60,7 +66,8 @@
     "elevation_gain": "1477m",
     "avg_gradient": "9%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "HC"
   },
   "Gambarogno_Indemini.gpx": {
     "start_name": "Gambarogno > Cima al Prato",
@@ -69,7 +76,8 @@
     "avg_gradient": "8.7%",
     "PB": "--",
     "strava": "--",
-    "status": "planned"
+    "status": "planned",
+    "category": "HC"
   },
   "Lago_del_Sambuco.gpx": {
     "start_name": "Peccia > Lago del Sambuco",
@@ -78,7 +86,8 @@
     "avg_gradient": "6.3%",
     "PB": "--",
     "strava": "--",
-    "status": "planned"
+    "status": "planned",
+    "category": "2"
   },
   "Monte Generoso.gpx": {
     "status": "planned",
@@ -87,7 +96,8 @@
     "elevation_gain": "775m",
     "avg_gradient": "7.6%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "1"
   },
   "Mergugno.gpx": {
     "status": "planned",
@@ -96,7 +106,8 @@
     "elevation_gain": "737m",
     "avg_gradient": "10.5%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "1"
   },
   "Monte Ceneri Pass.gpx": {
     "status": "planned",
@@ -105,7 +116,8 @@
     "elevation_gain": "340m",
     "avg_gradient": "5.2%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "2"
   },
   "Gravesano to Arosio.gpx": {
     "status": "planned",
@@ -114,7 +126,8 @@
     "elevation_gain": "472m",
     "avg_gradient": "11.2%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "2"
   },
   "Lago del Naret.gpx": {
     "status": "planned",
@@ -123,7 +136,8 @@
     "elevation_gain": "1482m",
     "avg_gradient": "6.8%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "HC"
   },
   "Monti di Piossina.gpx": {
     "status": "planned",
@@ -132,7 +146,8 @@
     "elevation_gain": "772m",
     "avg_gradient": "11.1%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "1"
   },
   "Via Naccio.gpx": {
     "status": "planned",
@@ -141,7 +156,8 @@
     "elevation_gain": "515m",
     "avg_gradient": "10.9%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "2"
   },
   "Monte Ceneri Summit.gpx": {
     "status": "planned",
@@ -150,7 +166,8 @@
     "elevation_gain": "577m",
     "avg_gradient": "5.5%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "2"
   },
   "Castel San Pietro to Muggio.gpx": {
     "status": "planned",
@@ -159,7 +176,8 @@
     "elevation_gain": "542m",
     "avg_gradient": "3.7%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "2"
   },
   "Morcote.gpx": {
     "status": "planned",
@@ -168,7 +186,8 @@
     "elevation_gain": "384m",
     "avg_gradient": "5.4%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "2"
   },
   "Monti di Ronco.gpx": {
     "status": "planned",
@@ -177,7 +196,8 @@
     "elevation_gain": "891m",
     "avg_gradient": "9.0%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "HC"
   },
   "Monte Bre Lugano.gpx": {
     "status": "planned",
@@ -186,7 +206,8 @@
     "elevation_gain": "321m",
     "avg_gradient": "6.4%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "3"
   },
   "Melano to Arogno.gpx": {
     "status": "planned",
@@ -195,7 +216,8 @@
     "elevation_gain": "447m",
     "avg_gradient": "5.3%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "2"
   },
   "Semione.gpx": {
     "status": "planned",
@@ -204,7 +226,8 @@
     "elevation_gain": "726m",
     "avg_gradient": "6.5%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "1"
   },
   "Alpe di Giumello.gpx": {
     "status": "planned",
@@ -213,7 +236,8 @@
     "elevation_gain": "1354m",
     "avg_gradient": "7.5%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "HC"
   },
   "Bignasco to San Carlo.gpx": {
     "status": "planned",
@@ -222,7 +246,8 @@
     "elevation_gain": "498m",
     "avg_gradient": "4.3%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "2"
   },
   "Dongio Brusacu.gpx": {
     "status": "planned",
@@ -231,7 +256,8 @@
     "elevation_gain": "822m",
     "avg_gradient": "8.5%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "HC"
   },
   "Acquarossa to Nara.gpx": {
     "status": "planned",
@@ -240,7 +266,8 @@
     "elevation_gain": "1021m",
     "avg_gradient": "8.4%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "HC"
   },
   "Cevio to Bosco Gurin.gpx": {
     "status": "planned",
@@ -249,7 +276,8 @@
     "elevation_gain": "1061m",
     "avg_gradient": "6.5%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "HC"
   },
   "Tremola.gpx": {
     "status": "planned",
@@ -258,7 +286,8 @@
     "elevation_gain": "930m",
     "avg_gradient": "6.9%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "HC"
   },
   "Piottino Predelp.gpx": {
     "status": "planned",
@@ -267,7 +296,8 @@
     "elevation_gain": "778m",
     "avg_gradient": "9.2%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "1"
   },
   "Via Sasso Corbaro.gpx": {
     "status": "planned",
@@ -276,7 +306,8 @@
     "elevation_gain": "226m",
     "avg_gradient": "6.3%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "3"
   },
   "Passo del Lucomagno.gpx": {
     "status": "planned",
@@ -285,7 +316,8 @@
     "elevation_gain": "1034m",
     "avg_gradient": "5.4%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "HC"
   },
   "Faido Osco.gpx": {
     "status": "planned",
@@ -294,7 +326,8 @@
     "elevation_gain": "378m",
     "avg_gradient": "7.2%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "2"
   },
   "Acquarossa to Leontica.gpx": {
     "status": "planned",
@@ -303,7 +336,8 @@
     "elevation_gain": "1022m",
     "avg_gradient": "8.0%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "HC"
   },
   "Carona.gpx": {
     "status": "planned",
@@ -312,7 +346,8 @@
     "elevation_gain": "337m",
     "avg_gradient": "5.4%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "2"
   },
   "Lago Ritom.gpx": {
     "status": "planned",
@@ -321,7 +356,8 @@
     "elevation_gain": "840m",
     "avg_gradient": "8.2%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "HC"
   },
   "Olivone Campo Blenio Luzzone.gpx": {
     "status": "planned",
@@ -330,7 +366,8 @@
     "elevation_gain": "643m",
     "avg_gradient": "7.1%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "1"
   },
   "Faido Cari.gpx": {
     "status": "planned",
@@ -339,7 +376,8 @@
     "elevation_gain": "915m",
     "avg_gradient": "7.8%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "HC"
   },
   "Ponto Valentino to Blenio.gpx": {
     "status": "planned",
@@ -348,7 +386,8 @@
     "elevation_gain": "580m",
     "avg_gradient": "7.7%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "2"
   },
   "Broglio to Brunesc.gpx": {
     "status": "planned",
@@ -357,7 +396,8 @@
     "elevation_gain": "794m",
     "avg_gradient": "9.1%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "1"
   },
   "Cureggia.gpx": {
     "status": "planned",
@@ -366,7 +406,8 @@
     "elevation_gain": "233m",
     "avg_gradient": "8.0%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "3"
   },
   "Curzutt.gpx": {
     "status": "planned",
@@ -375,7 +416,8 @@
     "elevation_gain": "255m",
     "avg_gradient": "6.7%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "3"
   },
   "San Defendente.gpx": {
     "status": "planned",
@@ -384,7 +426,8 @@
     "elevation_gain": "353m",
     "avg_gradient": "8.0%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "2"
   },
   "Bioggio to Cademario.gpx": {
     "status": "planned",
@@ -393,7 +436,8 @@
     "elevation_gain": "476m",
     "avg_gradient": "6.8%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "2"
   },
   "Crana to Spruga.gpx": {
     "status": "planned",
@@ -402,7 +446,8 @@
     "elevation_gain": "411m",
     "avg_gradient": "5.6%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "2"
   },
   "Sonvico to Colla.gpx": {
     "status": "planned",
@@ -411,7 +456,8 @@
     "elevation_gain": "817m",
     "avg_gradient": "4.7%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "HC"
   },
   "Monti della Gana.gpx": {
     "status": "planned",
@@ -420,7 +466,8 @@
     "elevation_gain": "228m",
     "avg_gradient": "8.0%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "3"
   },
   "Capanna Monte Bar.gpx": {
     "status": "planned",
@@ -429,7 +476,8 @@
     "elevation_gain": "1259m",
     "avg_gradient": "6.4%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "HC"
   },
   "Osura.gpx": {
     "status": "planned",
@@ -438,7 +486,8 @@
     "elevation_gain": "222m",
     "avg_gradient": "4.9%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "3"
   },
   "Gordola.gpx": {
     "status": "planned",
@@ -447,7 +496,8 @@
     "elevation_gain": "423m",
     "avg_gradient": "8.6%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "2"
   },
   "Tesserete to Convento Bigorio.gpx": {
     "status": "planned",
@@ -456,7 +506,8 @@
     "elevation_gain": "176m",
     "avg_gradient": "7.4%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "3"
   },
   "Neggio to Bedigliora.gpx": {
     "status": "planned",
@@ -465,7 +516,8 @@
     "elevation_gain": "290m",
     "avg_gradient": "5.4%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "3"
   },
   "Tesserete to Colla.gpx": {
     "status": "planned",
@@ -474,7 +526,8 @@
     "elevation_gain": "479m",
     "avg_gradient": "3.8%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "2"
   },
   "Camedo to Costa.gpx": {
     "status": "planned",
@@ -483,7 +536,8 @@
     "elevation_gain": "298m",
     "avg_gradient": "5.4%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "3"
   },
   "Gorduno to Bedretto.gpx": {
     "status": "planned",
@@ -492,7 +546,8 @@
     "elevation_gain": "984m",
     "avg_gradient": "10.5%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "HC"
   },
   "Bioggio to Breno.gpx": {
     "status": "planned",
@@ -501,16 +556,18 @@
     "elevation_gain": "609m",
     "avg_gradient": "4.5%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "2"
   },
-  "Frasco to Piè della Motta.gpx": {
+  "Frasco to Pie\u0300 della Motta.gpx": {
     "status": "planned",
-    "start_name": "Frasco to Piè della Motta",
+    "start_name": "Frasco to Pie\u0300 della Motta",
     "distance": "4.4km",
     "elevation_gain": "403m",
     "avg_gradient": "9.1%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "2"
   },
   "Camedo to Monadello.gpx": {
     "status": "planned",
@@ -519,7 +576,8 @@
     "elevation_gain": "404m",
     "avg_gradient": "6.0%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "2"
   },
   "Palagnedra.gpx": {
     "status": "planned",
@@ -528,7 +586,8 @@
     "elevation_gain": "244m",
     "avg_gradient": "6.2%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "3"
   },
   "Bedretto > Passo della Novena.gpx": {
     "status": "planned",
@@ -537,7 +596,8 @@
     "elevation_gain": "909m",
     "avg_gradient": "7.7%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "HC"
   },
   "Cavigliano > Loco.gpx": {
     "status": "planned",
@@ -546,6 +606,7 @@
     "elevation_gain": "376m",
     "avg_gradient": "5.7%",
     "PB": "--",
-    "strava": "--"
+    "strava": "--",
+    "category": "2"
   }
 }

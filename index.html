@@ -18,10 +18,47 @@
       text-align: center;
       pointer-events: auto;
     }
+    .progress-container {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      font-family: Arial, sans-serif;
+      width: 220px;
+      text-align: center;
+    }
+    .progress-label {
+      font-weight: bold;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .progress-bar {
+      width: 100%;
+      height: 14px;
+      background-color: #F2C94C;
+      border-radius: 7px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background-color: #D91E18;
+      width: 0%;
+      border-radius: 7px 0 0 7px;
+    }
   </style>
 </head>
 <body>
 <div id="map"></div>
+
+<div class="progress-container">
+  <span class="progress-label" id="progress-text">Loading progress...</span>
+  <div class="progress-bar">
+    <div class="progress-fill" id="progress-fill"></div>
+  </div>
+</div>
 
 <script>
   var map = L.map('map').setView([46.2, 8.9], 10);
@@ -42,14 +79,17 @@
 
   Promise.all([
     fetch('gpx_files.json').then(r => r.json()),
-    fetch('climbs_info.json').then(r => r.json())
+    fetch('climbs_info.json').then(r => r.json()),
+    fetch('stats.json').then(r => r.json())
   ])
-  .then(([gpxFiles, info]) => {
-    gpxFiles.sort((a,b) => {
-      const statusA = (info[a]?.status || 'ridden') === 'planned' ? 0 : 1;
-      const statusB = (info[b]?.status || 'ridden') === 'planned' ? 0 : 1;
-      return statusA - statusB;
-    });
+  .then(([gpxFiles, info, stats]) => {
+
+    // progress bar setup
+    var total = stats.total || 0;
+    var ridden = stats.ridden || 0;
+    var percent = total > 0 ? (ridden / total) * 100 : 0;
+    document.getElementById("progress-text").textContent = `Ridden ${ridden}/${total}`;
+    document.getElementById("progress-fill").style.width = percent + "%";
 
     gpxFiles.forEach(function(f) {
       var layer = omnivore.gpx('gpx/' + f).addTo(map);
@@ -64,6 +104,7 @@
 
         layer.getLayers()[0].setStyle({color: lineColor, weight: 4, opacity:1});
 
+        // emoji markers
         var startMarker = L.marker(coords[0], {
           icon: L.divIcon({
             className: 'emoji-marker',
@@ -71,7 +112,7 @@
             iconSize: [30,30],
             iconAnchor: [15,30]
           })
-        }).bindTooltip(climbInfo.start_name || f, {permanent:false, direction:"top"});
+        });
 
         var endMarker = L.marker(coords[coords.length - 1], {
           icon: L.divIcon({
@@ -82,22 +123,31 @@
           })
         });
 
-        var popupHTML = '';
-        if (climbInfo.distance) popupHTML += `<b>Distance:</b> ${climbInfo.distance}<br>`;
-        if (climbInfo.elevation_gain) popupHTML += `<b>Elevation gain:</b> ${climbInfo.elevation_gain}<br>`;
-        if (climbInfo.avg_gradient) popupHTML += `<b>Avg gradient:</b> ${climbInfo.avg_gradient}<br>`;
-        if (climbInfo.PB) popupHTML += `<b>PB:</b> ${climbInfo.PB}<br>`;
+        // start marker popup with Category
+        var startPopupHTML = '';
+        if (climbInfo.start_name) startPopupHTML += `<b>${climbInfo.start_name}</b><br>`;
+        if (climbInfo.category) startPopupHTML += `<b>Category:</b> ${climbInfo.category}<br>`;
+        startMarker.bindPopup(startPopupHTML);
+
+        // end marker popup
+        var endPopupHTML = '';
+        if (climbInfo.distance) endPopupHTML += `<b>Distance:</b> ${climbInfo.distance}<br>`;
+        if (climbInfo.elevation_gain) endPopupHTML += `<b>Elevation gain:</b> ${climbInfo.elevation_gain}<br>`;
+        if (climbInfo.avg_gradient) endPopupHTML += `<b>Avg gradient:</b> ${climbInfo.avg_gradient}<br>`;
+        if (climbInfo.PB) endPopupHTML += `<b>PB:</b> ${climbInfo.PB}<br>`;
+
+        // updated Strava logic
         if (climbInfo.strava) {
           if (climbInfo.strava.trim() !== '' && climbInfo.strava.trim() !== '--') {
-            popupHTML += `<b>Strava:</b> <a href="${climbInfo.strava}" target="_blank">Activity</a>`;
+            endPopupHTML += `<b>Strava:</b> <a href="${climbInfo.strava}" target="_blank">Activity</a>`;
           } else {
-            popupHTML += `<b>Strava:</b> --`;
+            endPopupHTML += `<b>Strava:</b> --`;
           }
         } else {
-          popupHTML += `<b>Strava:</b> --`;
+          endPopupHTML += `<b>Strava:</b> --`;
         }
 
-        endMarker.bindPopup(popupHTML);
+        endMarker.bindPopup(endPopupHTML);
 
         if (map.getZoom() >= 12) {
           startMarker.addTo(map);
