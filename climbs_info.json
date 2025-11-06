@@ -119,16 +119,6 @@
     "strava": "--",
     "category": "2"
   },
-  "Gravesano to Arosio.gpx": {
-    "status": "planned",
-    "start_name": "Gravesano to Arosio",
-    "distance": "4.2km",
-    "elevation_gain": "472m",
-    "avg_gradient": "11.2%",
-    "PB": "--",
-    "strava": "--",
-    "category": "2"
-  },
   "Lago del Naret.gpx": {
     "status": "planned",
     "start_name": "Lago del Naret",
@@ -429,16 +419,6 @@
     "strava": "--",
     "category": "2"
   },
-  "Bioggio to Cademario.gpx": {
-    "status": "planned",
-    "start_name": "Bioggio to Cademario",
-    "distance": "7.0km",
-    "elevation_gain": "476m",
-    "avg_gradient": "6.8%",
-    "PB": "--",
-    "strava": "--",
-    "category": "2"
-  },
   "Crana to Spruga.gpx": {
     "status": "planned",
     "start_name": "Crana to Spruga",
@@ -509,16 +489,6 @@
     "strava": "--",
     "category": "3"
   },
-  "Neggio to Bedigliora.gpx": {
-    "status": "planned",
-    "start_name": "Neggio to Bedigliora",
-    "distance": "5.4km",
-    "elevation_gain": "290m",
-    "avg_gradient": "5.4%",
-    "PB": "--",
-    "strava": "--",
-    "category": "3"
-  },
   "Tesserete to Colla.gpx": {
     "status": "planned",
     "start_name": "Tesserete to Colla",
@@ -548,16 +518,6 @@
     "PB": "--",
     "strava": "--",
     "category": "HC"
-  },
-  "Bioggio to Breno.gpx": {
-    "status": "planned",
-    "start_name": "Bioggio to Breno",
-    "distance": "13.6km",
-    "elevation_gain": "609m",
-    "avg_gradient": "4.5%",
-    "PB": "--",
-    "strava": "--",
-    "category": "2"
   },
   "Frasco to Pie\u0300 della Motta.gpx": {
     "status": "planned",
@@ -648,5 +608,55 @@
     "PB": "--",
     "strava": "--",
     "category": "HC"
+  },
+  "Monte Santa Maria.gpx": {
+    "status": "planned",
+    "start_name": "Monte Santa Maria",
+    "distance": "7.7km",
+    "elevation_gain": "440m",
+    "avg_gradient": "5.7%",
+    "PB": "--",
+    "strava": "--",
+    "category": "2"
+  },
+  "Bioggio > Cademario.gpx": {
+    "status": "planned",
+    "start_name": "Bioggio > Cademario",
+    "distance": "7.0km",
+    "elevation_gain": "491m",
+    "avg_gradient": "7.0%",
+    "PB": "--",
+    "strava": "--",
+    "category": "2"
+  },
+  "Gravesano > Arosio.gpx": {
+    "status": "planned",
+    "start_name": "Gravesano > Arosio",
+    "distance": "4.4km",
+    "elevation_gain": "483m",
+    "avg_gradient": "10.9%",
+    "PB": "--",
+    "strava": "--",
+    "category": "2"
+  },
+  "Torricella-Taverne > Pian Cusello.gpx": {
+    "status": "planned",
+    "start_name": "Torricella-Taverne > Pian Cusello",
+    "distance": "10.7km",
+    "elevation_gain": "953m",
+    "avg_gradient": "8.9%",
+    "PB": "--",
+    "strava": "--",
+    "category": "HC"
+  },
+  "Pura > Prati di Maggio.gpx": {
+    "status": "planned",
+    "start_name": "Pura > Prati di Maggio",
+    "distance": "11.0km",
+    "elevation_gain": "733m",
+    "avg_gradient": "6.7%",
+    "PB": "--",
+    "strava": "--",
+    "category": "1"
   }
 }
