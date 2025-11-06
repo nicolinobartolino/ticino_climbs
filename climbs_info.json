@@ -529,5 +529,23 @@
     "avg_gradient": "6.2%",
     "PB": "--",
     "strava": "--"
+  },
+  "Bedretto > Passo della Novena.gpx": {
+    "status": "planned",
+    "start_name": "Bedretto > Passo della Novena",
+    "distance": "11.8km",
+    "elevation_gain": "909m",
+    "avg_gradient": "7.7%",
+    "PB": "--",
+    "strava": "--"
+  },
+  "Cavigliano > Loco.gpx": {
+    "status": "planned",
+    "start_name": "Cavigliano > Loco",
+    "distance": "6.6km",
+    "elevation_gain": "376m",
+    "avg_gradient": "5.7%",
+    "PB": "--",
+    "strava": "--"
   }
 }
