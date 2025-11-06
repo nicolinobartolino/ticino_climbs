@@ -28,13 +28,16 @@
       font-size: 14px;
       z-index: 999;
     }
+    #progress-text {
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
     .progress-bar {
       width: 100%;
       background-color: #F2C94C;
       border-radius: 5px;
       overflow: hidden;
       height: 15px;
-      margin-top: 2px;
     }
     .progress-fill {
       height: 100%;
@@ -109,9 +112,9 @@
           })
         });
 
-        // updated tooltip with Category
+        // tooltip includes Category if it exists and is not "--"
         var startTooltip = climbInfo.start_name || f;
-        if (climbInfo.Category && climbInfo.Category !== '--') {
+        if (climbInfo.category && climbInfo.category.trim() !== '--') {
           startTooltip += ` (<b>Category:</b> ${climbInfo.category})`;
         }
         startMarker.bindTooltip(startTooltip, {
