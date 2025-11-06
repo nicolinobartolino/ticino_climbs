@@ -159,16 +159,6 @@
     "strava": "--",
     "category": "2"
   },
-  "Castel San Pietro to Muggio.gpx": {
-    "status": "planned",
-    "start_name": "Castel San Pietro to Muggio",
-    "distance": "14.6km",
-    "elevation_gain": "542m",
-    "avg_gradient": "3.7%",
-    "PB": "--",
-    "strava": "--",
-    "category": "2"
-  },
   "Morcote.gpx": {
     "status": "planned",
     "start_name": "Morcote",
@@ -479,26 +469,6 @@
     "strava": "--",
     "category": "2"
   },
-  "Tesserete to Convento Bigorio.gpx": {
-    "status": "planned",
-    "start_name": "Tesserete to Convento Bigorio",
-    "distance": "2.4km",
-    "elevation_gain": "176m",
-    "avg_gradient": "7.4%",
-    "PB": "--",
-    "strava": "--",
-    "category": "3"
-  },
-  "Tesserete to Colla.gpx": {
-    "status": "planned",
-    "start_name": "Tesserete to Colla",
-    "distance": "12.6km",
-    "elevation_gain": "479m",
-    "avg_gradient": "3.8%",
-    "PB": "--",
-    "strava": "--",
-    "category": "2"
-  },
   "Camedo to Costa.gpx": {
     "status": "planned",
     "start_name": "Camedo to Costa",
@@ -658,5 +628,25 @@
     "PB": "--",
     "strava": "--",
     "category": "1"
+  },
+  "Tesserete > Convento Bigorio.gpx": {
+    "status": "planned",
+    "start_name": "Tesserete > Convento Bigorio",
+    "distance": "3.6km",
+    "elevation_gain": "257m",
+    "avg_gradient": "7.1%",
+    "PB": "--",
+    "strava": "--",
+    "category": "3"
+  },
+  "Castel San Pietro > Scudellate.gpx": {
+    "status": "planned",
+    "start_name": "Castel San Pietro > Scudellate",
+    "distance": "14.2km",
+    "elevation_gain": "643m",
+    "avg_gradient": "4.5%",
+    "PB": "--",
+    "strava": "--",
+    "category": "2"
   }
 }
