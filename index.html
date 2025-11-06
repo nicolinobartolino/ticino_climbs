@@ -20,43 +20,38 @@
     }
     .progress-container {
       position: absolute;
-      bottom: 20px;
-      left: 20px;
-      background-color: rgba(255, 255, 255, 0.85);
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      font-family: Arial, sans-serif;
-      width: 220px;
+      bottom: 10px;
+      left: 10px;
+      width: 200px;
       text-align: center;
-    }
-    .progress-label {
-      font-weight: bold;
-      margin-bottom: 6px;
-      display: block;
+      font-family: sans-serif;
+      font-size: 14px;
+      z-index: 999;
     }
     .progress-bar {
       width: 100%;
-      height: 14px;
       background-color: #F2C94C;
-      border-radius: 7px;
+      border-radius: 5px;
       overflow: hidden;
+      height: 15px;
+      margin-top: 2px;
     }
     .progress-fill {
       height: 100%;
       background-color: #D91E18;
       width: 0%;
-      border-radius: 7px 0 0 7px;
+    }
+    .leaflet-tooltip.tooltip-html {
+      white-space: nowrap;
     }
   </style>
 </head>
 <body>
 <div id="map"></div>
-
 <div class="progress-container">
-  <span class="progress-label" id="progress-text">Loading progress...</span>
+  <div id="progress-text">Ridden 0/0</div>
   <div class="progress-bar">
-    <div class="progress-fill" id="progress-fill"></div>
+    <div id="progress-fill" class="progress-fill"></div>
   </div>
 </div>
 
@@ -79,17 +74,17 @@
 
   Promise.all([
     fetch('gpx_files.json').then(r => r.json()),
-    fetch('climbs_info.json').then(r => r.json()),
-    fetch('stats.json').then(r => r.json())
+    fetch('climbs_info.json').then(r => r.json())
   ])
-  .then(([gpxFiles, info, stats]) => {
+  .then(([gpxFiles, info]) => {
 
-    // progress bar setup
-    var total = stats.total || 0;
-    var ridden = stats.ridden || 0;
-    var percent = total > 0 ? (ridden / total) * 100 : 0;
-    document.getElementById("progress-text").textContent = `Ridden ${ridden}/${total}`;
-    document.getElementById("progress-fill").style.width = percent + "%";
+    // Update progress bar
+    var totalClimbs = Object.keys(info).length;
+    var riddenClimbs = Object.values(info).filter(c => c.status === 'ridden').length;
+    var progressText = document.getElementById('progress-text');
+    var progressFill = document.getElementById('progress-fill');
+    progressText.innerText = `Ridden ${riddenClimbs}/${totalClimbs}`;
+    progressFill.style.width = (riddenClimbs / totalClimbs * 100) + '%';
 
     gpxFiles.forEach(function(f) {
       var layer = omnivore.gpx('gpx/' + f).addTo(map);
@@ -114,6 +109,17 @@
           })
         });
 
+        // updated tooltip with Category
+        var startTooltip = climbInfo.start_name || f;
+        if (climbInfo.Category && climbInfo.Category !== '--') {
+          startTooltip += ` (<b>Category:</b> ${climbInfo.category})`;
+        }
+        startMarker.bindTooltip(startTooltip, {
+          permanent:false,
+          direction:"top",
+          className:'tooltip-html'
+        });
+
         var endMarker = L.marker(coords[coords.length - 1], {
           icon: L.divIcon({
             className: 'emoji-marker',
@@ -123,32 +129,23 @@
           })
         });
 
-        // start marker popup with Category
-        var startPopupHTML = '';
-        if (climbInfo.start_name) startPopupHTML += `<b>${climbInfo.start_name}</b><br>`;
-        if (climbInfo.category) startPopupHTML += `<b>Category:</b> ${climbInfo.category}<br>`;
-        startMarker.bindPopup(startPopupHTML);
-
-        // end marker popup
-        var endPopupHTML = '';
-        if (climbInfo.distance) endPopupHTML += `<b>Distance:</b> ${climbInfo.distance}<br>`;
-        if (climbInfo.elevation_gain) endPopupHTML += `<b>Elevation gain:</b> ${climbInfo.elevation_gain}<br>`;
-        if (climbInfo.avg_gradient) endPopupHTML += `<b>Avg gradient:</b> ${climbInfo.avg_gradient}<br>`;
-        if (climbInfo.PB) endPopupHTML += `<b>PB:</b> ${climbInfo.PB}<br>`;
-
-        // updated Strava logic
+        var popupHTML = '';
+        if (climbInfo.distance) popupHTML += `<b>Distance:</b> ${climbInfo.distance}<br>`;
+        if (climbInfo.elevation_gain) popupHTML += `<b>Elevation gain:</b> ${climbInfo.elevation_gain}<br>`;
+        if (climbInfo.avg_gradient) popupHTML += `<b>Avg gradient:</b> ${climbInfo.avg_gradient}<br>`;
+        if (climbInfo.PB) popupHTML += `<b>PB:</b> ${climbInfo.PB}<br>`;
         if (climbInfo.strava) {
           if (climbInfo.strava.trim() !== '' && climbInfo.strava.trim() !== '--') {
-            endPopupHTML += `<b>Strava:</b> <a href="${climbInfo.strava}" target="_blank">Activity</a>`;
+            popupHTML += `<b>Strava:</b> <a href="${climbInfo.strava}" target="_blank">Activity</a>`;
           } else {
-            endPopupHTML += `<b>Strava:</b> --`;
+            popupHTML += `<b>Strava:</b> --`;
           }
         } else {
-          endPopupHTML += `<b>Strava:</b> --`;
+          popupHTML += `<b>Strava:</b> --`;
         }
+        endMarker.bindPopup(popupHTML);
 
-        endMarker.bindPopup(endPopupHTML);
-
+        // show markers based on zoom
         if (map.getZoom() >= 12) {
           startMarker.addTo(map);
           endMarker.addTo(map);

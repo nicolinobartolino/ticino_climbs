@@ -608,5 +608,15 @@
     "PB": "--",
     "strava": "--",
     "category": "2"
+  },
+  "Barbengo > Agra.gpx": {
+    "status": "planned",
+    "start_name": "Barbengo > Agra",
+    "distance": "3.7km",
+    "elevation_gain": "240m",
+    "avg_gradient": "6.5%",
+    "PB": "--",
+    "strava": "--",
+    "category": "3"
   }
 }
