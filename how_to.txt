@@ -6,7 +6,7 @@ This populates the gpx_files.json with the gpx name, adds route to the map and t
 2nd python script to extract and write Distance, Elevation and Average gradient
 Run: python3 auto_update_climb_info.py
 
-Cheeky extra script to populate start names from gpx file name:
+Cheeky extra script to populate start names from the gpx file name:
 Run: python3 update_start_names.py
 
 Script to update progress bar
@@ -18,3 +18,4 @@ python3 auto_assign_climb_categories.py
 
 Changing status from planned to ridden changes the route to red (manual)
 PB and Strava link can be edited in climbs_info.json manually
+
