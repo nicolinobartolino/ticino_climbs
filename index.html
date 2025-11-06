@@ -89,7 +89,15 @@
     progressText.innerText = `Ridden ${riddenClimbs}/${totalClimbs}`;
     progressFill.style.width = (riddenClimbs / totalClimbs * 100) + '%';
 
-    gpxFiles.forEach(function(f) {
+    // ✅ sort so planned draws first, ridden on top
+    var sortedFiles = gpxFiles.sort((a, b) => {
+      const statusA = info[a]?.status || '';
+      const statusB = info[b]?.status || '';
+      return statusA === 'planned' && statusB === 'ridden' ? -1 :
+             statusA === 'ridden' && statusB === 'planned' ? 1 : 0;
+    });
+
+    sortedFiles.forEach(function(f) {
       var layer = omnivore.gpx('gpx/' + f).addTo(map);
 
       layer.on('ready', function() {
