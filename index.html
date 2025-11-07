@@ -75,6 +75,12 @@
     });
   });
 
+  // create separate panes to control layer stacking (ridden always above planned)
+  map.createPane('plannedPane');
+  map.getPane('plannedPane').style.zIndex = 400;
+  map.createPane('riddenPane');
+  map.getPane('riddenPane').style.zIndex = 500;
+
   Promise.all([
     fetch('gpx_files.json').then(r => r.json()),
     fetch('climbs_info.json').then(r => r.json())
@@ -89,26 +95,25 @@
     progressText.innerText = `Ridden ${riddenClimbs}/${totalClimbs}`;
     progressFill.style.width = (riddenClimbs / totalClimbs * 100) + '%';
 
-    // ✅ sort so planned draws first, ridden on top
-    var sortedFiles = gpxFiles.sort((a, b) => {
-      const statusA = info[a]?.status || '';
-      const statusB = info[b]?.status || '';
-      return statusA === 'planned' && statusB === 'ridden' ? -1 :
-             statusA === 'ridden' && statusB === 'planned' ? 1 : 0;
-    });
+    gpxFiles.forEach(function(f) {
+      var climbInfo = info[f] || {};
+      var paneName = climbInfo.status === 'planned' ? 'plannedPane' : 'riddenPane';
 
-    sortedFiles.forEach(function(f) {
-      var layer = omnivore.gpx('gpx/' + f).addTo(map);
+      var layer = omnivore.gpx('gpx/' + f, null, L.geoJson(null, {pane: paneName})).addTo(map);
 
       layer.on('ready', function() {
         var coords = layer.getLayers()[0].getLatLngs();
-        var climbInfo = info[f] || {};
 
         var riddenLineColor = '#D91E18';
         var plannedLineColor = '#F2C94C';
         var lineColor = climbInfo.status === 'planned' ? plannedLineColor : riddenLineColor;
 
-        layer.getLayers()[0].setStyle({color: lineColor, weight: 4, opacity:1});
+        layer.getLayers()[0].setStyle({
+          color: lineColor,
+          weight: 4,
+          opacity: 1,
+          pane: paneName
+        });
 
         // emoji markers
         var startMarker = L.marker(coords[0], {
