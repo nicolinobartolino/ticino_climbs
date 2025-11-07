@@ -648,5 +648,15 @@
     "PB": "--",
     "strava": "--",
     "category": "2"
+  },
+  "Cugnasco > Monti della Gana.gpx": {
+    "status": "planned",
+    "start_name": "Cugnasco > Monti della Gana",
+    "distance": "11.7km",
+    "elevation_gain": "1005m",
+    "avg_gradient": "8.6%",
+    "PB": "--",
+    "strava": "--",
+    "category": "HC"
   }
 }
